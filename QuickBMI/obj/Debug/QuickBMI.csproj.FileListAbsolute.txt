@@ -1,0 +1,13 @@
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\bin\Debug\QuickBMI.exe.config
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\bin\Debug\QuickBMI.exe
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\bin\Debug\QuickBMI.pdb
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\QuickBMI.csprojResolveAssemblyReference.cache
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\App.g.cs
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\QuickBMI_MarkupCompile.cache
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\QuickBMI.g.resources
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\QuickBMI.csproj.GenerateResource.Cache
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\QuickBMI.exe
+c:\users\jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\QuickBMI.pdb
+C:\Users\Jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\JesseMorgutia.Projects.QuickBMI.Properties.Resources.resources
+C:\Users\Jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\mainwindow.baml
+C:\Users\Jesse\documents\visual studio 2013\Projects\QuickBMI\QuickBMI\obj\Debug\mainwindow.g.cs

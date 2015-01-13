@@ -1,0 +1,115 @@
+﻿<Window x:Class="JesseMorgutia.projects.QuickBMI.Application"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="QuickBMI" Height="200" Width="525" MinHeight="200" MinWidth="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition  Height="2.5*"/>
+           
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".65*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Name="BMI"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Text="[BMI]"
+                   FontSize="35pt"
+
+            />
+        <TextBlock Name="BMI_result"
+                   Margin ="5"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Text="[Result]"
+                   FontSize="12pt" 
+                   
+                   />
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Margin="15"
+                   Text="Your BMI is: "                   
+                   VerticalAlignment="center"
+                   HorizontalAlignment="Center"  
+                   FontSize =" 14pt"
+            />
+
+        <!--ROW 1-->
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Please select your height: "
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   />
+        <TextBlock Name="heightFieldinFt"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Text= "{Binding Value}"
+                   HorizontalAlignment="right"
+                   VerticalAlignment="Center"
+                   Margin="15,5"
+                   />
+        <Slider Name="heightSlider"
+                Minimum="36"
+                Maximum="96"
+                
+                Value="70"
+                Grid.Row="0"
+                Grid.Column="1"
+                Width="230"      
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="5" ValueChanged="heightSlider_ValueChanged"
+        />
+
+  
+
+        <!-- ROW 2-->
+        <TextBlock Name="weightFieldinLbs"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Text= "{Binding Value}"
+                   HorizontalAlignment="right"
+                   VerticalAlignment="Center"
+                   Margin="15,5"
+                   />
+        <Slider Name="weightSlider"
+                Minimum="80"
+                Maximum="300"       
+                Value="174"
+                Grid.Row="1"
+                Grid.Column="1"
+                Width="230"       
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="5" 
+                ValueChanged="weightSlider_ValueChanged"
+        />
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Text="Please select your weight: "
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   />
+
+        <!--BOTTOM ROW-->
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
