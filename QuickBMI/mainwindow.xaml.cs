@@ -1,39 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace JesseMorgutia.projects.QuickBMI
 {
-    public partial class Application : Window
+    public partial class Application 
     {
         public Application()
         {
             InitializeComponent();
         }
-        private static int currentHeight = 1;
-        private static double currentWeight = 0;
+        private static int _currentHeight = 1;
+        private static double _currentWeight;
 
 
         private void heightSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            heightSlider.Value = (int)e.NewValue;
-            heightFieldinFt.Text = inchesToFeet((int)e.NewValue);
-            currentHeight = (int)e.NewValue;
-            recalculateBMI();
+            HeightSlider.Value = (int)e.NewValue;
+            HeightFieldinFt.Text = InchesToFeet((int)e.NewValue);
+            _currentHeight = (int)e.NewValue;
+            RecalculateBmi();
         }
 
-        private string inchesToFeet(int inches)
+        private static string InchesToFeet(int inches)
         {
             int ft = inches / 12;
             int remainder = inches % 12;
@@ -42,43 +31,39 @@ namespace JesseMorgutia.projects.QuickBMI
 
         private void weightSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            weightFieldinLbs.Text = e.NewValue.ToString("F1") + " lbs";
-            currentWeight = e.NewValue;
-            recalculateBMI();
+            WeightFieldinLbs.Text = e.NewValue.ToString("F1") + " lbs";
+            _currentWeight = e.NewValue;
+            RecalculateBmi();
         }
 
 
-        private void recalculateBMI()
+        private void RecalculateBmi()
         {
-            double bmi = currentWeight * 703 / (currentHeight * currentHeight);
-            BMI.Text = bmi.ToString("F1");
-            BMI_result.Text = analizeBMI(bmi);
+            double bmi = _currentWeight * 703 / (_currentHeight * _currentHeight);
+            Bmi.Text = bmi.ToString("F1");
+            BmiResult.Text = AnalizeBmi(bmi);
  
         }
 
-        private String analizeBMI(double num)
+        private String AnalizeBmi(double num)
         {
             if (num >= 30)
             {
-                BMI_result.Foreground = new SolidColorBrush(Colors.Red);
+                BmiResult.Foreground = new SolidColorBrush(Colors.Red);
                 return "Obese";
             }
-            else if (num >= 25)
+            if (num >= 25)
             {
-                BMI_result.Foreground = new SolidColorBrush(Colors.Orange);
+                BmiResult.Foreground = new SolidColorBrush(Colors.Orange);
                 return "Overweight";
             }
-            else if (num >= 18.5)
+            if (num >= 18.5)
             {
-                BMI_result.Foreground = new SolidColorBrush(Colors.Green);
+                BmiResult.Foreground = new SolidColorBrush(Colors.Green);
                 return "Normal";
             }
-            else
-            {
-                BMI_result.Foreground = new SolidColorBrush(Colors.Red);
+                BmiResult.Foreground = new SolidColorBrush(Colors.Red);
                 return "Underweight";
-            }
-                
         }
     }
 }

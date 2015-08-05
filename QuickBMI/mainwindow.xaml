@@ -15,7 +15,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Name="BMI"
+        <TextBlock Name="Bmi"
                    Grid.Row="2"
                    Grid.Column="1"
                    VerticalAlignment="Top"
@@ -24,7 +24,7 @@
                    FontSize="35pt"
 
             />
-        <TextBlock Name="BMI_result"
+        <TextBlock Name="BmiResult"
                    Margin ="5"
                    Grid.Row="2"
                    Grid.Column="1"
@@ -50,7 +50,7 @@
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    />
-        <TextBlock Name="heightFieldinFt"
+        <TextBlock Name="HeightFieldinFt"
                    Grid.Row="0"
                    Grid.Column="1"
                    Text= "{Binding Value}"
@@ -58,7 +58,7 @@
                    VerticalAlignment="Center"
                    Margin="15,5"
                    />
-        <Slider Name="heightSlider"
+        <Slider Name="HeightSlider"
                 Minimum="36"
                 Maximum="96"
                 
@@ -74,7 +74,7 @@
   
 
         <!-- ROW 2-->
-        <TextBlock Name="weightFieldinLbs"
+        <TextBlock Name="WeightFieldinLbs"
                    Grid.Row="1"
                    Grid.Column="1"
                    Text= "{Binding Value}"
@@ -82,7 +82,7 @@
                    VerticalAlignment="Center"
                    Margin="15,5"
                    />
-        <Slider Name="weightSlider"
+        <Slider Name="WeightSlider"
                 Minimum="80"
                 Maximum="300"       
                 Value="174"
@@ -102,14 +102,5 @@
                    />
 
         <!--BOTTOM ROW-->
-
-
-
-
-
-
-
-
-
     </Grid>
 </Window>
